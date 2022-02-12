@@ -55,18 +55,18 @@ h6 {
     font-size: 14px;
     font-weight: 600;
 }
-p.b {
-    font-size: 14px;
-    font-weight: 500;
-}
+
 p {
     font-size: 14px;
     font-weight: 400;
 }
-
+p.b {
+    font-weight: 500;
+}
 a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
 }
 a:hover {
     opacity: .85;
@@ -101,10 +101,10 @@ a:hover {
 }
 
 .about-us {
-    background: linear-gradient(to left, var(--lightslate) 420px, transparent 300px);
+    background: linear-gradient(to left, var(--lightslate) 31%, transparent 31%);
 }
 .about-us>.container {
-    background: url(../images/map.svg) center right/600px auto no-repeat;
+    background: url(../images/map.svg) center right/50% auto no-repeat;
 }
 
 .what-we-do .item>h2 {
@@ -119,4 +119,58 @@ a:hover {
 .main-footer {
     background-color: var(--lightslate);
     color: white;
+}
+
+@media (max-width: 1030px) {
+    .about-us {
+        background: linear-gradient(to left, var(--lightslate) 28%, transparent 28%);
+    }
+    .about-us>.container {
+        background-size: 42%;
+    }
+}
+
+@media (max-width: 770px) {
+    .about-us {
+        background: none;
+    }
+    .about-us>.container {
+        background: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-navbar {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 45px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    .about-us {
+        background: url(../images/map.svg) -200px 0/100% auto repeat-x;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 13px;
+    }
+    p {
+        font-size: 13px;
+    }
+    a {
+        font-size: 14px;
+    }
 }
