@@ -1,0 +1,122 @@
+* {
+    font-family: Montserrat, sans-serif;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #bcbcbc;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: var(--darkslate);
+}
+
+body {
+    background-color: white;
+}
+
+/*  */
+li {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 65px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 40px;
+    font-weight: 600;
+}
+h4 {
+    font-size: 17px;
+    font-weight: 300;
+}
+h3 {
+    font-size: 17px;
+    font-weight: 500;
+    border-bottom: 1px solid #707070;
+    text-transform: uppercase;
+}
+h3.u {
+    text-transform: uppercase;
+}
+h3.c {
+    text-transform: capitalize;
+}
+h3.no-line {
+    border-bottom: 0;
+}
+h5 {
+    font-size: 17px;
+    font-weight: 400;
+}
+h6 {
+    font-size: 14px;
+    font-weight: 600;
+}
+p.b {
+    font-size: 14px;
+    font-weight: 500;
+}
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    opacity: .85;
+}
+
+/*  */
+
+
+.main-navbar {
+    background-color: var(--darkslate);
+    border-bottom-left-radius: 5px;
+}
+
+.main-navbar>.navs {
+    list-style: none;
+}
+
+.link {
+    color: var(--lightslate);
+}
+.link.selected {
+    color: white;
+}
+
+
+.main-header h1 {
+    color: var(--lightslate);
+}
+
+.main-header h4 {
+    color: white;
+}
+
+.about-us {
+    background: linear-gradient(to left, var(--lightslate) 420px, transparent 300px);
+}
+.about-us>.container {
+    background: url(../images/map.svg) center right/600px auto no-repeat;
+}
+
+.what-we-do .item>h2 {
+    color: var(--darkslate);
+}
+
+.people {
+    background-color: var(--darkslate);
+    color: white;
+}
+
+.main-footer {
+    background-color: var(--lightslate);
+    color: white;
+}
