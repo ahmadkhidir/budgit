@@ -29,6 +29,25 @@ a {
 
 /*  */
 
+#splash-screen {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.ln {
+    position: absolute;
+    right: 50px;
+    top: 400px;
+    object-fit: contain;
+    width: 25px;
+}
 .main-navbar {
     height: 100px;
     width: 100%;
@@ -74,7 +93,7 @@ a {
 }
 
 .main-header {
-    height: 700px;
+    min-height: 700px;
     width: 100%;
     position: relative;
     padding: 200px var(--padding) 50px;
@@ -146,7 +165,7 @@ a {
 .what-we-do .item {
     flex: 0 1 350px;
     margin-right: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .what-we-do .item>img {
     width: 50px;
@@ -175,7 +194,7 @@ a {
 .people .content>.item {
     flex: 0 1 250px;
     margin-right: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 .people .content>.item>img {
     width: 230px;
@@ -215,6 +234,9 @@ a {
         margin-left: 50px;
         max-width: 400px;
     }
+    .ln {
+        right: 40px;
+    }
 }
 
 @media (max-width: 1030px) {
@@ -232,6 +254,9 @@ a {
     }
     .what-we-do .item {
         flex-basis: 450px;
+    }
+    .ln {
+        right: 20px;
     }
 }
 
@@ -264,5 +289,8 @@ a {
     }
     .main-footer>.container>* {
         flex-basis: 250px;
+    }
+    .ln {
+        right: 15px;
     }
 }

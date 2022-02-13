@@ -75,6 +75,10 @@ a:hover {
 /*  */
 
 
+#splash-screen {
+    background-color: var(--darkslate);
+}
+
 .main-navbar {
     background-color: var(--darkslate);
     border-bottom-left-radius: 5px;
@@ -84,11 +88,13 @@ a:hover {
     list-style: none;
 }
 
-.link {
+.link>a {
     color: var(--lightslate);
+    text-transform: uppercase;
 }
-.link.selected {
+.link.selected>a, .link:hover>a {
     color: white;
+    opacity: 1;
 }
 
 

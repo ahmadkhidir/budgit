@@ -5,4 +5,5 @@ app_name = "frontend"
 
 urlpatterns = [
     path("", HomeView.as_view(), name="home"),
+    path("<str:lang>/", HomeView.as_view(), name="home"),
 ]

@@ -6,11 +6,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(20,79,101)" />
+
+    <meta
+      name="description"
+      content="Budgit"
+    />
+
     <title>Budgit</title>
     <link rel="stylesheet" href="{% static 'frontend/css/base.css'%}">
+    <link rel="manifest" href="{% static 'frontend/manifest.json'%}" />
 </head>
 <body>
+    <div id="splash-screen">
+        <img src="{% static 'frontend/images/logo.svg' %}" alt="loading" />
+    </div>
+
     {% block content %}
     {% endblock content %}
+
+    <script src="{% static 'frontend/js/base.js'%}"></script>
 </body>
 </html>
