@@ -9,7 +9,7 @@ class HomeView(View):
         intro = Intro.objects.last()
         about = AboutUs.objects.last()
         what_we_do = WhatWeDo.objects.all()
-        people = People.objects.all()
+        people = People.objects.all().order_by("id")
         contact = Contact.objects.last()
 
         context = {
