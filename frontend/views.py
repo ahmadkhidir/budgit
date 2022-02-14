@@ -8,7 +8,7 @@ class HomeView(View):
     def get(self, request, lang=settings.LANGUAGE_CODE):
         intro = Intro.objects.last()
         about = AboutUs.objects.last()
-        what_we_do = WhatWeDo.objects.all()
+        what_we_do = WhatWeDo.objects.all().order_by("id")
         people = People.objects.all().order_by("id")
         contact = Contact.objects.last()
 
