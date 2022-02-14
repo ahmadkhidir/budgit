@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.views import View
 from .models import Intro, AboutUs, WhatWeDo, People, Contact
-from .utils import SUPPORTED_LANG
-from  django.conf import settings
+from django.conf import settings
 
 
 class HomeView(View):
