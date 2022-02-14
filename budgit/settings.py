@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "192.168.43.120",
-    "127.0.0.1"
+    "127.0.0.1",
+    'budgit-web.herokuapp.com'
 ]
 
 
