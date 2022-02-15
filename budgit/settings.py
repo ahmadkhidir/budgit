@@ -37,13 +37,14 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
-    'frontend',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'frontend',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -82,14 +83,22 @@ WSGI_APPLICATION = 'budgit.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default2': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'budgit',
+        'USER': 'postgres',
+        'PASSWORD': 'moyorboy05',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
-DATABASES['default'] = dj_database_url.config(
-    conn_max_age=600, ssl_require=True)
+# DATABASES['default'] = dj_database_url.config(
+#     conn_max_age=600, ssl_require=True)
 
 
 # Password validation
@@ -140,9 +149,21 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, '../var/mediafiles')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+AWS_S3_REGION_NAME = "eu-west-2"
+AWS_ACCESS_KEY_ID = 'AKIA355VVZK6WEJOPNOW'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'budgit-web'
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_DEFAULT_ACL = None
